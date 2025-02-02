@@ -1,13 +1,53 @@
 # Parallel-Hashing-Prototype
 
-Prototype aims to achieve:
+## 📌 Prerequisites
 
-1. Generate hashes to some constraint (e.g. last 5 characters are 1s).
-2. Generate hashes to some constraint in parallel.
+- 🐍 Python **3.13+**
+- 📦 pip (Python package manager)
+- ⚙️ Dependencies (See `requirements.txt`)
 
-TODO:
+## 🚀 Installation
 
-1. Generate hash
-2. Iteratively generate hashes to some constraint
-3. Use Dask to add parallelization
-4. Introduce diagnostic tools
+### 1️⃣ Create a Virtual Environment
+
+```sh
+python3 -m venv venv
+
+# or
+
+python -m venv venv
+```
+
+### 2️⃣ Activate the Virtual Environment. 
+
+On macOS & Linux
+
+```sh
+source venv/bin/activate 
+```
+
+On Windows (PowerShell)
+
+```sh
+venv\Scripts\Activate
+```
+
+On Windows (CMD)
+
+```sh
+venv\Scripts\activate.bat
+```
+
+### 3️⃣ Install Dependencies
+
+```sh
+(venv) pip install -r requirements.txt
+```
+
+### 4️⃣ Deactivate the Virtual Environment (optional)
+
+When you're done, deactivate with:
+
+```sh
+deactivate
+```
