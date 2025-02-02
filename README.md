@@ -54,7 +54,6 @@ venv\Scripts\activate.bat
 (venv) python -m pyhash
 ```
 
-
 ### 5️⃣ Deactivate the Virtual Environment (optional)
 
 When you're done, deactivate with:
@@ -62,3 +61,9 @@ When you're done, deactivate with:
 ```sh
 deactivate
 ```
+
+# Dask Dashboard
+
+[http://localhost:8787/status](http://localhost:8787/status)
+
+![Dask Dashboard](images/dask_dashboard.png)

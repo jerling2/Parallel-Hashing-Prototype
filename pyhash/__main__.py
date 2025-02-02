@@ -7,6 +7,7 @@ import logging
 # Suppress Dask warnings by setting the log level to ERROR
 # Used to supress the 'Removing worker ... caused the cluster to lose already
 # computed task(s)' message.
+logging.getLogger('distributed.worker.state_machine').setLevel(logging.ERROR)
 logging.getLogger('distributed.scheduler').setLevel(logging.ERROR)
 
 # Define a timeout exception handler
