@@ -71,7 +71,7 @@ def main():
     hexdigest_end, hexdigest_constraint, num_workers, chunk_size, timeout = user_input()
     
     mcp = mp.MCP(num_workers, hexdigest_constraint, chunk_size, hash_utils.IterSHA256)
-    print(f"\x1B[1;95mRunning MCP (num_workers={num_workers} constraint='{hexdigest_end}', chunk_size={num_workers}, hashIterator='SHA256')\x1b[0m")
+    print(f"\x1B[1;95mRunning MCP (num_workers={num_workers} constraint='{hexdigest_end}', chunk_size={chunk_size}, hashIterator='SHA256')\x1b[0m")
     if timeout != -1:
         print(f"\x1b[2;35mTimeout in {timeout} (s)\x1b[0m")
         signal.alarm(timeout)
