@@ -20,14 +20,14 @@ signal.signal(signal.SIGALRM, timeout_handler)
 def user_input():
     # Ask for the characters the hexdigest should end with
     while True:
-        hexdigest_end = input("What characters should the hexdigest end with? (default: fff) ")
+        hexdigest_end = input("What characters should the hexdigest end with? (default: c0ffee) ")
         if re.match("^[0-9a-fA-F]{1,64}$", hexdigest_end):
             hexdigest_constraint = lambda x: x.endswith(hexdigest_end.lower())
             hexdigest_string = hexdigest_end.lower()
             break
         else:
-            hexdigest_constraint = lambda x: x.endswith('fff')
-            hexdigest_string = 'fff'
+            hexdigest_constraint = lambda x: x.endswith('c0ffee')
+            hexdigest_string = 'c0ffee'
             break
     while True:
         num_workers_string = input("How many workers? (default: 4) ")
@@ -42,9 +42,9 @@ def user_input():
         except ValueError as e:
             print(f"Invalid input! {e} Please enter a valid number.")
     while True:
-        chunk_size_string = input("Chunk size? (default: 100) ")
+        chunk_size_string = input("Chunk size? (default: 32768) ")
         if chunk_size_string == '':
-            chunk_size = 100
+            chunk_size = 32768
             break
         try:
             chunk_size = int(chunk_size_string)
