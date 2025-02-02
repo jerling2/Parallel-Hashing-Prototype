@@ -6,7 +6,7 @@
 - 📦 pip (Python package manager)
 - ⚙️ Dependencies (See `requirements.txt`)
 
-## 🚀 Installation
+## 🚀 Install and Run
 
 ### 1️⃣ Create a Virtual Environment
 
@@ -44,7 +44,18 @@ venv\Scripts\activate.bat
 (venv) pip install -r requirements.txt
 ```
 
-### 4️⃣ Deactivate the Virtual Environment (optional)
+### 4️⃣ Run main
+
+```sh
+(venv) python3 -m pyhash
+
+# or
+
+(venv) python -m pyhash
+```
+
+
+### 5️⃣ Deactivate the Virtual Environment (optional)
 
 When you're done, deactivate with:
 

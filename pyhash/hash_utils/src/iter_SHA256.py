@@ -14,12 +14,12 @@ class IterSHA256(HashIterator):
     def __init__(self, key: int, num_keys: int):
         validateIterSHA256(key, num_keys)
         super().__init__(key.to_bytes(key.bit_length(), byteorder='big'))
-        self.hash = sha256()
         self.range = key + num_keys
 
     def generate_hash(self, nonce: bytes):
-        self.hash.update(nonce)
-        return self.hash.hexdigest()
+        h = sha256()
+        h.update(nonce)
+        return h.hexdigest()
 
     def check_bounds(self, nonce: bytes):
         value = int.from_bytes(nonce, byteorder='big')
